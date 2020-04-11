@@ -1,2 +1,2 @@
 # store_api
-Store api as built by Jose
+Store API implemented on Heroku
