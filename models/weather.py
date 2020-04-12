@@ -22,10 +22,10 @@ class WeatherModel(db.Model):
     soar_h = db.Column(db.Float())
     b_level_height = db.Column(db.Float())
     freezing_level = db.Column(db.Float())
-    TI700 = db.Column(db.Float())
-    TI800 = db.Column(db.Float())
-    TI850 = db.Column(db.Float())
-    TI900 = db.Column(db.Float())
+    ti700 = db.Column(db.Float())
+    ti800 = db.Column(db.Float())
+    ti850 = db.Column(db.Float())
+    ti900 = db.Column(db.Float())
     num_ti = db.Column(db.Integer())
     lifted_index = db.Column(db.Float())
     cape = db.Column(db.Float())
@@ -46,10 +46,10 @@ class WeatherModel(db.Model):
                        soar_h,
                        b_level_height,
                        freezing_height,
-                       TI700,
-                       TI800,
-                       TI850,
-                       TI900,
+                       ti700,
+                       ti800,
+                       ti850,
+                       ti900,
                        num_ti,
                        lifted_index,
                        cape,
@@ -69,10 +69,10 @@ class WeatherModel(db.Model):
         self.soar_h = soar_h
         self.b_level_height = b_level_height
         self.freezing_height = freezing_height
-        self.TI700 = TI700
-        self.TI800 = TI800
-        self.TI850 = TI850
-        self.TI900 = TI900
+        self.ti700 = ti700
+        self.ti800 = ti800
+        self.ti850 = ti850
+        self.ti900 = ti900
         self.num_ti = num_ti
         self.lifted_index = lifted_index
         self.cape = cape
