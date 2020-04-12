@@ -45,7 +45,7 @@ class WeatherModel(db.Model):
                        dry_h,
                        soar_h,
                        b_level_height,
-                       freezing_height,
+                       freezing_level,
                        ti700,
                        ti800,
                        ti850,
@@ -68,7 +68,7 @@ class WeatherModel(db.Model):
         self.dry_h = dry_h
         self.soar_h = soar_h
         self.b_level_height = b_level_height
-        self.freezing_height = freezing_height
+        self.freezing_level = freezing_level
         self.ti700 = ti700
         self.ti800 = ti800
         self.ti850 = ti850
@@ -94,7 +94,7 @@ class WeatherModel(db.Model):
                 'dry_h': self.dry_h,
                 'soar_h': self.soar_h,
                 'b_level_height': self.b_level_height,
-                'freezing_height': self.freezing_height,
+                'freezing_level': self.freezing_level,
                 'ti700': self.ti700,
                 'ti800': self.ti800,
                 'ti850': self.ti850,
