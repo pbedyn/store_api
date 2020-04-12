@@ -33,3 +33,53 @@ class WeatherModel(db.Model):
     helicity = db.Column(db.Float())
     cloudwater = db.Column(db.Float())
     cloudice = db.Column(db.Float())
+    
+    def __init__(self, country,
+                       location_name,
+                       date_hour,
+                       temp,
+                       cloud,
+                       wind_dir,
+                       wind_speed,
+                       gust_speed,
+                       dry_h,
+                       soar_h,
+                       b_level_height,
+                       freezing_height,
+                       TI700,
+                       TI800,
+                       TI850,
+                       TI900,
+                       num_ti,
+                       lifted_index,
+                       cape,
+                       conv_inh,
+                       helicity,
+                       cloudwater,
+                       cloudice):
+        self.country = country
+        self.location_name = location_name
+        self.date_hour = date_hour
+        self.temp = temp
+        self.cloud = cloud
+        self.wind_dir = wind_dir
+        self.wind_speed = wind_speed
+        self.gust_speed = gust_speed
+        self.dry_h = dry_h
+        self.soar_h = soar_h
+        self.b_level_height = b_level_height
+        self.freezing_height = freezing_height
+        self.TI700 = TI700
+        self.TI800 = TI800
+        self.TI850 = TI850
+        self.TI900 = TI900
+        self.num_ti = num_ti
+        self.lifted_index = lifted_index
+        self.cape = cape
+        self.conv_inh = conv_inh
+        self.helicity = helicity
+        self.cloudwater = cloudwater
+        self.cloudice = cloudice
+        
+    def get_all_data(self):
+        return self.query.all()
