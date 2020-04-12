@@ -33,10 +33,3 @@ class WeatherModel(db.Model):
     helicity = db.Column(db.Float())
     cloudwater = db.Column(db.Float())
     cloudice = db.Column(db.Float())
-    
-    def __init__(self, id):
-        self._id = id
-    
-    ### returns json version of the name and price tuple
-    def json(self):
-        return {'_id': self._id}
