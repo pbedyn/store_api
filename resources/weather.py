@@ -5,4 +5,4 @@ from models.weather import WeatherModel
 
 class WeatherList(Resource):
     def get(self):
-        return WeatherModel.get_all_data().json()
+         return return {'weather': [weather.json() for weather in WeatherModel.query.all()]}
