@@ -5,4 +5,4 @@ from models.weather import WeatherModel
 
 class WeatherList(Resource):
     def get(self):
-        return WeatherModel.query.all()
+        return WeatherModel.query.all().to_dict()
