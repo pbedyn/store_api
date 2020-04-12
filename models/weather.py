@@ -81,5 +81,28 @@ class WeatherModel(db.Model):
         self.cloudwater = cloudwater
         self.cloudice = cloudice
         
-    def get_all_data(self):
-        return self.query.all()
+    ### returns json version of the name and price tuple
+    def json(self):
+        return {'country': self.country, 
+                'location_name': self.location_name,
+                'date_hour': self.date_hour,
+                'temp': self.temp,
+                'cloud': self.cloud,
+                'wind_dir': self.wind_dir,
+                'wind_speed': self.wind_speed,
+                'gust_speed': self.gust_speed,
+                'dry_h': self.dry_h,
+                'soar_h': self.soar_h,
+                'b_level_height': self.b_level_height,
+                'freezing_height': self.freezing_height,
+                'ti700': self.ti700,
+                'ti800': self.ti800,
+                'ti850': self.ti850,
+                'ti900': self.ti900,
+                'num_ti': self.num_ti,
+                'lifted_index': self.lifted_index,
+                'cape': self.cape,
+                'conv_inh': self.conv_inh,
+                'helicity': self.helicity,
+                'cloudwater': self.cloudwater,
+                'cloudice': self.cloudice}
